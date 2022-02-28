@@ -1,0 +1,592 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+ }
+ body{
+     font-family: montserrat;
+ }
+nav{
+    background-color: #141E27;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    line-height: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 100px;
+}
+nav ul{
+    float: right;
+    margin-right:20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+background-color: white;
+color: black;
+border-radius: 10px;
+font-weight: 800;
+transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+     margin-top: 25px;
+     cursor: pointer;
+     display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width: 952px)
+{
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px)
+{
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        }
+        a:hover,a.active{
+            background: none;
+            color: #0082e6;
+        }
+        #check:checked ~ ul{
+            left: 0px;
+        }
+    }
+    .img-1{
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(100vh - 80px);   
+        width: 100%;
+    }
+    .img-1{
+        box-shadow: 2px 2px 3px 2px;
+        height: 70%;
+        margin-top: 50px;
+        margin:10px;
+      
+
+    }
+    .img-1:hover{
+        box-shadow: 2px 2px 2px 3px; box-shadow: -2px 2px 2px -3px;
+        
+    }
+    .img-top{
+        width: 100%;
+    }
+    .card{
+        height: 70%;
+        display: inline-block;
+        margin:10px;
+        margin-top: 50px;
+        margin-left: 15px;
+        text-align: center;
+    }
+    .h-1{
+        font-weight: 800;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        line-height: 2px;
+        padding-top: 100px;
+        letter-spacing: 5px;
+ 
+    }
+    .card-top{
+    
+        box-sizing: border-box;
+    }
+
+    
+    .card-title{
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+
+    }
+    .card-text{
+        justify-content: center;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .btn{
+        color: black;
+        border-radius: 20px;
+        padding: 10px 10px;
+        background-color: pink;
+        letter-spacing: 2px;
+        font-weight: 800;
+        box-shadow: 2px 2px 3px 2px;
+    }
+    /* .container
+    {
+        width: 100%; 
+    } */
+    .slide{
+        width: 100%;
+        height: 100vh;
+        box-shadow: 2px 2px 2px 3px;
+    } 
+    .content{
+        padding-top: 5%;
+        align-items: center;
+        text-align: center; 
+    }
+    .slide:hover{
+        box-shadow: 2px 2px 2px 3px; box-shadow: -2px 2px 2px -3px;
+    }
+    .h-2{
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-top: 20px;
+    }
+    .p-1{
+        width: 40%;
+        letter-spacing: 2px;
+        line-height: 20px;
+        margin-top: 20px;
+        margin-left: 30%;
+    
+    }
+    .btn-2{
+        margin-top: 20px;
+        padding: 10px 10px;
+        border-radius: 30px;
+        letter-spacing: 2px;
+        font-weight: 800;
+        font-family: Arial,  sans-serif;
+    }
+    .btn-2:hover{
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        transition: 0.5s;
+        font-family: elephant;
+    }
+    .hr-1{
+        width: 18%;
+        background-color: #008E89;
+        padding: 1.1px;
+        margin: 30px auto 0px;
+    }
+    .hr-2{
+        width: 12%;
+        background-color: #F2C9E1;
+        padding: 1.2px;
+        margin: 10px auto -40px;
+
+    }
+    .hr-3{
+        width: 5%;
+        background-color: #6EBF8B;
+        padding: 1.2px;
+        margin: 50px auto -50px;
+    }
+    .wrapper{
+  width: 100%;
+}
+.carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+.slide-1{
+    height: 500px;
+}
+.hel-1{
+    font-weight: 800;
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}
+.gym{
+    width: 60px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+
+}
+.freebie{
+    font-weight: 800;
+    font-size: 2.rem;
+    color: white;
+    background-color: #1b1b1b;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+b{
+    font-weight: 800;
+    font-family: fantasy;
+    letter-spacing: 1px;
+}
+.card-title-1{
+    color: blue;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"> <img class="gym" src="https://cdn4.vectorstock.com/i/1000x1000/26/53/gym-logo-template-vector-21092653.jpg" alt=""> GYM WORKOUT</label>
+    <ul>
+      <li><a class="active" href="">Home</a></li>
+      <li><a href="">About Us</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">feedback</a></li>
+    </ul>
+  </nav>
+  <section>
+    <img class="img-top" src=" https://wallpaperaccess.com/full/1108015.jpg">
+  </section>
+  <!-- Card -->
+
+  <h1 class="h-1"> GYM Gallery</h1>
+  <hr class="hr-1">
+  <hr class="hr-2">
+  <hr class="hr-3">
+
+  <div class="card-top">
+
+    <div class="card" style="width: 18rem;">
+      <img class="img-1"
+        src="https://c4.wallpaperflare.com/wallpaper/206/268/839/pose-muscle-muscle-rod-press-hd-wallpaper-preview.jpg"
+        class="card" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">GYM CLUB</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="img-1"
+        src="https://wallpaperforu.com/wp-content/uploads/2021/07/Wallpaper-Girl-Workout-Fitness-Gym-5309x2263px-5k-Fre151680x1050.jpg"
+        class="card" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">GYM CLUB</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="img-1"
+        src="https://www.bodybuilding.com/images/2016/june/leg-workouts-for-men-7-best-workouts-for-quads-glutes-hams-header-v2-830x467.jpg"
+        class="card" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">GYM CLUB</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="img-1" src="https://wallpaperaccess.com/full/1108015.jpg" class="card" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">GYM CLUB</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="container">
+    <div class="content">
+      <img class="slide"
+        src="https://previews.123rf.com/images/fotokvadrat/fotokvadrat1609/fotokvadrat160900005/64009058-athlete-muscular-bodybuilder-training-back-workout-in-the-gym.jpg"
+        alt="">
+      <h1 class="h-2">ABOUT GYM</h1>
+      <p class="p-1">A healthy gymnastic body not only reflects a great personality but it also makes you stronger and
+        keep fit. Gym activities keep you away from laziness makes you active and energetic whole day and enables you to
+        perform various tasks. One of the most common mental benefits of exercise is stress relief.24-Jun-2018</p>
+      <div class="btn-2"> <a href="https://nutrabay.com/product-category/bodybuilding/proteins/whey-proteins/?utm_source=google&utm_medium=cpc&utm_campaign=AO_Search_Generic_Protein&utm_content=Genreric_Protein&utm_term=gym%20protein&gclid=Cj0KCQiAmeKQBhDvARIsAHJ7mF4UDaFwsVYcrUaPcobi78vzvy-755xPz0ZyGWZtOOEBblaFdM1Ij8MaAly9EALw_wcB">VISIT WEBSITE</a></div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <h1 class="hel-1">BEST WORKOUT</h1>
+  <div class="wrapper">
+    <div class="carousel owl-carousel">
+      <div class="card card-1">
+        <img class="slide-1" src="https://cdn7.dissolve.com/p/D943_244_479/D943_244_479_1200.jpg" alt="">
+      </div>
+      <div class="card card-8">
+        <img class="slide-1" src="https://img.dtcn.com/image/themanual/difficult-doesnt-mean-impossible-800x800.jpg" alt="">
+      </div><div class="card card-2">
+        <img class="slide-1"  src="https://cdn7.dissolve.com/p/D943_244_479/D943_244_479_1200.jpg" alt="">
+      </div><div class="card card-3">
+        <img class="slide-1"  src="https://cdn.lifehack.org/wp-content/uploads/2018/03/workout-routines-for-men-1024x768.jpeg" alt="">
+      </div><div class="card card-4">
+        <img class="slide-1"  src="https://www.masculinedevelopment.com/wp-content/uploads/2020/07/guy-doing-pullups.jpg" alt="">
+      </div><div class="card card-5">
+        <img class="slide-1"  src="https://cdn.luxe.digital/media/2020/08/16161635/best-men-workout-clothing-brand-under-armour-luxe-digital.jpg" alt="">
+      </div><div class="card card-6">
+        <img class="slide-1"  src="https://i.pinimg.com/736x/1f/e7/0e/1fe70e9c44d0d7f5ee26845b418bc5fd.jpg" alt="">
+      </div><div class="card card-7">
+        <img class="slide-1"  src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/people-using-weight-machines-in-fitness-center-royalty-free-image-175137901-1544543871.jpg?crop=1.00xw:0.752xh;0,0.248xh&resize=480:*" alt="">
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://ethix.in/wp-content/uploads/2019/05/Gym-Body-Powder-Cover-600x600.jpg"
+      class="card">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Gold 100% <br>whey-proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://5.imimg.com/data5/RX/UD/MY-16243535/gym-protein-powder-third-party-manufacturer-500x500.jpg"
+      class="card" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Pure whey-proteins <br>Protein Concentrate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1632967252-image-1632967203.jpg?crop=0.894xw:1.00xh;0.0513xw,0&resize=480%3A%2A"
+      class="card">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Pure whey <br> proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1" src="https://tiimg.tistatic.com/fp/1/003/750/gym-protein-powder-842-w300.jpg" class="card" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Gold <br>whey-proteins Concentrate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://www.jiomart.com/images/product/600x600/rvvkvpkugq/bigmuscles-nutrition-premium-gold-whey-1kg-smooth-banana-cream-product-images-orvvkvpkugq-p590410187-1-202108091306.jpg"
+      class="card">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Gold 100% <br>whey-proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://cdn11.bigcommerce.com/s-zuuif4xp3j/product_images/uploaded_images/mass-gainer-vs-whey.png"
+      class="card" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Gold 100% <br>whey-proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://us.123rf.com/450wm/aleksanderdn/aleksanderdn1809/aleksanderdn180900036/107753793-sports-nutrition-whey-bcaa-amino-protein-objects-isolated-on-white-background-3d-render.jpg?ver=6"
+      class="card">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Gold 100% <br>whey-proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1" src="https://www.ubuy.co.in/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODF4YStBcnk1ckwuX0FDX1NMMTUwMF8uanBn.jpg" class="card" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Pure whey <br> proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://5.imimg.com/data5/SELLER/Default/2021/6/GV/BB/CW/55180850/protein-isolate-desing-500x500-500x500.jpeg"
+      class="card">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Pure whey <br> proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://miro.medium.com/max/600/1*fGLMk-s9mfk0wZy0u_brGg.jpeg"
+      class="card" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Pure whey <br> proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1"
+      src="https://image.shutterstock.com/image-vector/protein-cocktail-ads-vector-realistic-260nw-719897926.jpg"
+      class="card">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Pure whey <br> proteins Isolate</h5>
+      <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="img-1" src="https://cdn.shopify.com/s/files/1/0012/2404/8747/files/flyer_cabecera_proteinM4X_1080x1350_90cc5bbd-5a95-4e42-a668-c8891bf7b6be.jpg" class="card" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-1">Nutrabay Gold <br>whey-proteins Concentrate</h5>
+ <p class="card-text-2">⭐⭐⭐⭐⭐ (92)</p>
+      <p class="card-text-3">From: $20 <b>1,329</b> </p>
+      <br>
+      <a class="freebie" href="#"> 🎁 FREEBIE</a>    </div>
+  </div>
+ 
+  <script>
+    $(".carousel").owlCarousel({
+margin: 20,
+loop: true,
+autoplay: true,
+autoplayTimeout: 2000,
+autoplayHoverPause: true,
+responsive: {
+  0:{
+    items:1,
+    nav: false
+  },
+  600:{
+    items:2,
+    nav: false
+  },
+  1000:{
+    items:3,
+    nav: false
+  }
+}
+});
+
+</script>
+</body>
+
+</html>
